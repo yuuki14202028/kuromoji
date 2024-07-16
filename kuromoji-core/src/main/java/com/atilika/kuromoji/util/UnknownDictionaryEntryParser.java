@@ -35,10 +35,10 @@ public class UnknownDictionaryEntryParser extends DictionaryEntryLineParser {
         short wordCost = Short.parseShort(fields[3]);
 
         List<String> pos = new ArrayList<>();
-        pos.addAll(Arrays.asList(fields).subList(4, 10));
+        pos.addAll(Arrays.asList(fields).subList(4, 5));
 
         List<String> features = new ArrayList<>();
-        features.addAll(Arrays.asList(fields).subList(10, fields.length));
+        features.addAll(Arrays.asList(fields).subList(5, fields.length));
 
         GenericDictionaryEntry dictionaryEntry = new GenericDictionaryEntry.Builder()
             .surface(surface)
